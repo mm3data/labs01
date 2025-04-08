@@ -5,10 +5,12 @@ conf t
 line console 0
 password cisco
 login
+login synchronous
 end
 en
 conf t
 enable secret class
+no ip domain-lookup
 exit
 conf t
 line vty 0 15
@@ -25,5 +27,5 @@ conf t
 interface vlan 1
 ip address 192.168.1.2 255.255.255.0
 no shutdown
-ip default-gateway 192.168.1.1
+ip ip default-gateway 192.168.1.1
 exit
