@@ -1,0 +1,27 @@
+en
+conf t
+hostname S1
+conf t
+line console 0
+password cisco
+login
+end
+en
+conf t
+enable secret class
+exit
+conf t
+line vty 0 15
+password cisco
+login
+end
+en
+conf t
+servise password-encription
+banner motd "ATTANTION"
+copy running-cofig to start-up confing
+exit
+conf t
+interface vlan 1
+ip address 192.168.1.2 255.255.255.0
+no shutdown
