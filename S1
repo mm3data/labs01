@@ -9,18 +9,18 @@ login synchronous
 end
 en
 conf t
-enable secret class
+enable secret cisco
 no ip domain-lookup
 exit
 conf t
-line vty 0 15
+line vty 0 4
 password cisco
 login
 end
 en
 conf t
 servise password-encription
-banner motd "ATTANTION"
+banner motd # Unauthorized access is strictly prohibited. #
 copy running-cofig to start-up confing
 exit
 conf t
